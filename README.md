@@ -16,6 +16,8 @@ excercise to rollout updates
 
 ```kubectl -n rollout set image deployment/rollout-deployment rollout=toleksa/kube-rollout:v2``` request rollout of version 2
 
+```kubectl -n rollout rollout status -w deployment/rollout-deployment``` watch rollout progress
+
 ```curl rollout.kube.ac``` should be new answer (after couple seconds)
 
 ```kubectl -n rollout rollout history deployment/rollout-deployment``` check history of rollouts
