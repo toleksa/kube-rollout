@@ -8,20 +8,20 @@ excercise to rollout updates
 2. run.sh (optional) to check if images are working correctly
 ### on kubernetes host
 3. deploy-rollout.sh
-### excercises
-add rollout.kube.ac to /etc/hosts
+### excercises:
+!!!add rollout.kube.ac to /etc/hosts!!!
 
-```curl rollout.kube.ac``` 
+```curl rollout.kube.ac``` check answer from website
 
-```kubectl -n rollout set image deployment/rollout-deployment rollout=toleksa/kube-rollout:v2```
+```kubectl -n rollout set image deployment/rollout-deployment rollout=toleksa/kube-rollout:v2``` request rollout of version 2
 
-```curl rollout.kube.ac```
+```curl rollout.kube.ac``` should be new answer (after couple seconds)
 
-```kubectl -n rollout rollout history deployment/rollout-deployment```
+```kubectl -n rollout rollout history deployment/rollout-deployment``` check history of rollouts
 
-```kubectl -n rollout rollout undo deployment/rollout-deployment --to-revision=1```
+```kubectl -n rollout rollout undo deployment/rollout-deployment --to-revision=1``` revert to previous version
 
-```curl rollout.kube.ac```
+```curl rollout.kube.ac``` should be old answer (after couple seconds)
 
-```kubectl delete namespace rollout```
+```kubectl delete namespace rollout``` cleanup afterwards
 
