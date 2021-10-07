@@ -10,11 +10,18 @@ excercise to rollout updates
 3. deploy-rollout.sh
 ### excercises
 add rollout.kube.ac to /etc/hosts
+
+```curl rollout.kube.ac``` 
+
+```kubectl -n rollout set image deployment/rollout-deployment rollout=toleksa/kube-rollout:v2```
+
 ```curl rollout.kube.ac```
-kubectl -n rollout set image deployment/rollout-deployment rollout=toleksa/kube-rollout:v2
-curl rollout.kube.ac
-kubectl -n rollout rollout history deployment/rollout-deployment
-kubectl -n rollout rollout undo deployment/rollout-deployment --to-revision=1
-curl rollout.kube.ac
-kubectl delete namespace rollout
+
+```kubectl -n rollout rollout history deployment/rollout-deployment```
+
+```kubectl -n rollout rollout undo deployment/rollout-deployment --to-revision=1```
+
+```curl rollout.kube.ac```
+
+```kubectl delete namespace rollout```
 
