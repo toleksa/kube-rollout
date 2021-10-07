@@ -8,8 +8,9 @@ excercise to rollout updates
 2. run.sh (optional) to check if images are working correctly
 ### on kubernetes host
 3. deploy-rollout.sh
+4. ***add rollout.kube.ac to /etc/hosts***
+
 ### excercises:
-!!!add rollout.kube.ac to /etc/hosts!!!
 
 ```curl rollout.kube.ac``` check answer from website
 
