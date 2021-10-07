@@ -9,7 +9,7 @@ excercise to rollout updates
 ### on kubernetes host
 3. deploy-rollout.sh
 ### excercises
-curl rollout.kube.ac
+```curl rollout.kube.ac```
 kubectl -n rollout set image deployment/rollout-deployment rollout=toleksa/kube-rollout:v2
 curl rollout.kube.ac
 kubectl -n rollout rollout history deployment/rollout-deployment
